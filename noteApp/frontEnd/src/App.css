@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(66, 66, 66);
+}
+.navBar {
+  background-color: rgb(51, 102, 51);
+  text-align: center;
+  padding: 20px;
+  color: white;
+  margin-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+.mainContainer {
+  background-color: rgb(146, 136, 124);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.sidebar {
+  border: 2px solid red;
+  width: 30%;
+  padding: 1%;
+  color: yellowgreen;
+}
+.notes {
+  border: 1px solid black;
+  width: 100%;
+}
+.note-container {
+  border: 2px solid black;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.new-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.new-note button {
+  font-size: 4rem;
+  display: flex;
+}
