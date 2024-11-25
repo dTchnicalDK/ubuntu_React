@@ -1,24 +1,27 @@
-.nav button{
-    cursor: pointer;
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    color: white;
+.noteForm {
+  width: 100vw;
 }
-.nav button:nth-child(1){
-    background-color: red;
+.nav button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
 }
-.nav button:nth-child(2){
-    background-color: green;
+.nav button:nth-child(1) {
+  background-color: red;
 }
-.noteForm{
-    display: flex;
-    flex-direction: column;
-    
+.nav button:nth-child(2) {
+  background-color: green;
 }
-.noteForm input, textarea{
-    background-color: blanchedalmond;
-    font-size: 1.5rem;
-    padding: 10px;
+.noteForm {
+  display: flex;
+  flex-direction: column;
+}
+.noteForm input,
+textarea {
+  background-color: blanchedalmond;
+  font-size: 1.5rem;
+  padding: 10px;
 }

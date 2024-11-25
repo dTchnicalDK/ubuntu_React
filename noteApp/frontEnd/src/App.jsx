@@ -43,14 +43,14 @@ function App() {
           <h2>siedebar</h2>
         </div>
         <div className="notes">
-          <Link to={"/notes"}>
-            <div className="new-note">
+          <div className="new-note">
+            <Link to={"/notes"}>
               <button>
                 <IoMdAdd />
               </button>
               {/* <small>Add New Notes</small> */}
-            </div>
-          </Link>
+            </Link>
+          </div>
           <div className="note-container">
             {notes.map((note, index) => {
               // console.log(`app index= ${index}`);

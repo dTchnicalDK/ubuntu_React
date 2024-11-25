@@ -12,35 +12,42 @@ body {
 .mainContainer {
   background-color: rgb(146, 136, 124);
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  padding: 10px;
+  /* width: 100vw;
+  height: 100vh; */
 }
 .sidebar {
-  border: 2px solid red;
-  width: 30%;
+  /* border: 2px solid red; */
+  width: 20%;
+  margin-right: 5px;
   padding: 1%;
+  height: 60vh;
   color: yellowgreen;
 }
 .notes {
-  border: 1px solid black;
+  border: 1px solid rgb(30, 43, 33);
   width: 100%;
 }
 .note-container {
-  border: 2px solid black;
-  width: 100%;
-  height: 100%;
+  /* border: 2px solid black; */
+
   padding: 15px;
+  margin-left: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .new-note {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  /* border: 1px solid rebeccapurple; */
+  width: 10%;
+  margin: 10px;
+  box-shadow: 1px 1px 3px;
+  border-radius: 10px;
 }
 .new-note button {
   font-size: 4rem;
-  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
 }
