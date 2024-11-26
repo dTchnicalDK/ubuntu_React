@@ -6,8 +6,6 @@ import axios from "axios";
 import Note from "./components/note/Note";
 import { IoMdAdd } from "react-icons/io";
 
-//configuring routes
-
 function App() {
   const initialNote = [
     {
@@ -32,9 +30,6 @@ function App() {
 
   return (
     <>
-      {/* {console.log("return ran")} */}
-      {/* {console.log(notes)} */}
-
       <div className="navBar">
         <h2>welcome to Note Book by Dharmendra</h2>
       </div>

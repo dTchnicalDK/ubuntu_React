@@ -1,19 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import "./NoteComponent.css";
+import { useParams } from "react-router-dom";
+import "./EditUi.css";
 
 //declaration of blanck object for initial value of "noteFields"
-export const NoteComponent = () => {
+export const EditUi = () => {
+  const { id } = useParams();
+
+  //state declaration
   const initiaNote = {
     title: "",
     content: "",
   };
-
-  //state declaration
   const [noteFields, setNoteFields] = useState(initiaNote);
   const navigate = useNavigate();
+
+  //fetching previous data that is to be edited
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/api/search/${id}`)
+      .then((data) => {
+        setNoteFields(data.data);
+      })
+      .catch((err) => {
+        console.log(`axios error: ${err}`);
+      });
+  }, []);
 
   //different functions
   const changeHandler = (e) => {
@@ -21,17 +35,18 @@ export const NoteComponent = () => {
     setNoteFields({ ...noteFields, [name]: value });
     // console.log(noteFields);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!noteFields.title || !noteFields.content) {
       return console.log("enter title, or content first");
     }
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/create",
+      const response = await axios.put(
+        `http://localhost:3000/api/edit/${id}`,
         noteFields
       );
-      // console.log(response.data.msg);
+      console.log(response.data.msg);
       toast.success(response.data.msg, { position: "top-left" });
       navigate("/home");
     } catch (error) {
@@ -63,6 +78,7 @@ export const NoteComponent = () => {
             type="text"
             placeholder="enter title here"
             name="title"
+            value={noteFields.title}
             onChange={changeHandler}
           />
           <textarea
@@ -70,6 +86,7 @@ export const NoteComponent = () => {
             id=""
             rows={20}
             cols={30}
+            value={noteFields.content}
             onChange={changeHandler}
           ></textarea>
         </form>

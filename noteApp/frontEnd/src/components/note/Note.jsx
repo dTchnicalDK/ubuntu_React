@@ -1,7 +1,7 @@
 import { FcTreeStructure } from "react-icons/fc";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import {
   FacebookIcon,
@@ -31,8 +31,10 @@ function Note({ data, index }) {
       });
   };
 
-  const handleEdit = () => {
-    console.log("edit button clicked");
+  //function to edit note
+  const handleEdit = (e) => {
+    navigate(`/edit/${data._id}`);
+    console.log("edit page activated");
   };
 
   return (

@@ -37,11 +37,11 @@
   bottom: 0px;
   left: 0px;
   cursor: pointer;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
-/* .container:hover .menu {
+.container:hover .menu {
   visibility: visible;
-} */
+}
 .share-container {
   position: absolute;
   z-index: 7;

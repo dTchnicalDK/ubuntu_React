@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { NoteComponent } from "./components/noteComponent/NoteComponent.jsx";
 import Toaster from "react-hot-toast";
+import { EditUi } from "./components/edit/EditUi.jsx";
 
 //configuring routerProvider
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/notes",
     element: <NoteComponent />,
+  },
+  {
+    path: "/edit/:id",
+    element: <EditUi />,
   },
 ]);
 
