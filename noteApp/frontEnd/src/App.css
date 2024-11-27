@@ -2,7 +2,7 @@ body {
   background-color: rgb(66, 66, 66);
 }
 .navBar {
-  background-color: rgb(51, 102, 51);
+  background-color: #8174a0;
   text-align: center;
   padding: 20px;
   color: white;
@@ -10,19 +10,28 @@ body {
   border-bottom: 2px solid white;
 }
 .mainContainer {
-  background-color: rgb(146, 136, 124);
+  background-color: #a888b5;
+  min-height: 100vh;
   display: flex;
-  padding: 10px;
-  /* width: 100vw;
-  height: 100vh; */
 }
 .sidebar {
-  /* border: 2px solid red; */
   width: 20%;
-  margin-right: 5px;
-  padding: 1%;
-  height: 60vh;
-  color: yellowgreen;
+  height: 100%;
+  /* margin-right: 10px; */
+  color: rgb(201, 199, 199);
+  background-color: #8174a0;
+}
+.sidebar li {
+  background-color: #a888b5;
+  margin-bottom: 5px;
+  padding: 5px 5px 5px 15px;
+  box-shadow: 1px 1px 2px black;
+  /* border-bottom: 1px solid #ffd2a0; */
+}
+.sidebar li:hover {
+  font-size: larger;
+  text-align: center;
+  color: orange;
 }
 .notes {
   border: 1px solid rgb(30, 43, 33);
@@ -38,15 +47,15 @@ body {
   flex-wrap: wrap;
 }
 .new-note {
-  /* border: 1px solid rebeccapurple; */
   width: 10%;
-  margin: 10px;
+  margin: 10px 10px 10px 30px;
   box-shadow: 1px 1px 3px;
   border-radius: 10px;
 }
 .new-note button {
   font-size: 4rem;
   width: 100%;
+  background-color: rgb(4, 189, 235);
   border-radius: 10px;
   text-align: center;
   cursor: pointer;

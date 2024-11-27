@@ -34,22 +34,25 @@ function App() {
         <h2>welcome to Note Book by Dharmendra</h2>
       </div>
       <div className="mainContainer">
-        <div className="sidebar">
-          <h2>siedebar</h2>
-        </div>
+        <ul className="sidebar">
+          <li>side menu</li>
+          <li>side menu</li>
+          <li>side menu</li>
+          <li>side menu</li>
+          <li>side menu</li>
+          <li>side menu</li>
+          <li>side menu</li>
+        </ul>
         <div className="notes">
           <div className="new-note">
             <Link to={"/notes"}>
               <button>
                 <IoMdAdd />
               </button>
-              {/* <small>Add New Notes</small> */}
             </Link>
           </div>
           <div className="note-container">
             {notes.map((note, index) => {
-              // console.log(`app index= ${index}`);
-
               return <Note data={note} key={index} />;
             })}
           </div>

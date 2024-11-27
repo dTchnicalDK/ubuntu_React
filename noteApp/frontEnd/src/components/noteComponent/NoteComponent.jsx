@@ -65,13 +65,15 @@ export const NoteComponent = () => {
             name="title"
             onChange={changeHandler}
           />
-          <textarea
-            name="content"
-            id=""
-            rows={20}
-            cols={30}
-            onChange={changeHandler}
-          ></textarea>
+          <div>
+            <textarea
+              id="content-body"
+              name="content"
+              rows={20}
+              cols={30}
+              onChange={changeHandler}
+            ></textarea>
+          </div>
         </form>
       </div>
     </>

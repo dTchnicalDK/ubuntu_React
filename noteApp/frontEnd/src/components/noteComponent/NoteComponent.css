@@ -19,9 +19,14 @@
   display: flex;
   flex-direction: column;
 }
+/* .content {
+  background-color: rgba(0, 0, 0, 0.61);
+} */
 .noteForm input,
 textarea {
-  background-color: blanchedalmond;
+  background-image: url("../../assets/img/paper1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
   font-size: 1.5rem;
-  padding: 10px;
 }

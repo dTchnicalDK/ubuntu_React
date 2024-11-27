@@ -38,7 +38,7 @@ function Note({ data, index }) {
   };
 
   return (
-    <div className="container">
+    <div className="container" onDoubleClick={handleEdit}>
       <h3 className="title">{data.title}</h3>
       <p className="body">{data.content}</p>
       <div className="menu">
