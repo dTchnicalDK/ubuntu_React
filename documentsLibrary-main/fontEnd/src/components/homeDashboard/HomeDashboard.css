@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --orange: #f76b56;
+  --grey: #626262;
+  --light-text: #8a8a8a;
+  --dark-text: #4d4d4d;
+}
+.container {
+  background-color: rgba(0, 0, 0, 0.295);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  .side-bar {
+    width: 20%;
+    height: 100%;
+    border: 2px solid green;
+  }
+  .main-container {
+    flex: 1;
+    border: 2px solid orangered;
+    .top-nav {
+      border: 1px solid black;
+      height: 10%;
+      .eleDiv {
+        height: 40px;
+        border-radius: 40px;
+        box-shadow: 1px 1px 3px;
+        font-size: 1.5rem;
+        max-width: 30%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        label {
+          font-size: 16px;
+        }
+        .search-option {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          padding-left: 10px;
+          #search-select {
+            width: 20px;
+            margin-left: 3px;
+          }
+        }
+        .search-input {
+          height: 100%;
+          flex: 1;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          overflow: hidden;
+          border-top-right-radius: 40px;
+          border-bottom-right-radius: 40px;
+          margin-left: 5px;
+          input {
+            height: 100%;
+            width: 100%;
+            padding-left: 10px;
+            background-color: #ffffff;
+            border: none;
+            font-size: 1.5rem;
+          }
+        }
+        .buttons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          right: 5px;
+          top: 0px;
+        }
+        button {
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          color: var(--orange);
+          background-color: #ffffff;
+          border: none;
+          font-size: 1.5rem;
+          margin-left: 5px;
+        }
+      }
+    }
+    .main {
+      flex: 1;
+      background-color: aquamarine;
+    }
+  }
+}
