@@ -1,7 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.demon {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--light-text);
 }
 :root {
   --orange: #f76b56;
@@ -9,6 +21,30 @@
   --light-text: #8a8a8a;
   --dark-text: #4d4d4d;
 }
+/* universal css classes */
+.eleDiv {
+  height: 40px;
+  margin: 5px;
+  border-radius: 40px;
+  box-shadow: 1px 1px 3px;
+  font-size: 1rem;
+  max-width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  min-width: 11%;
+  overflow: hidden;
+  label {
+    font-size: 16px;
+  }
+}
+.line {
+  height: 25px;
+  width: 1px;
+  background-color: var(--light-text);
+}
+/* -------------------css startin here------------------------ */
 .container {
   background-color: rgba(0, 0, 0, 0.295);
   width: 100vw;
@@ -25,18 +61,19 @@
     .top-nav {
       border: 1px solid black;
       height: 10%;
-      .eleDiv {
+      display: flex;
+      justify-content: space-between;
+      button {
         height: 40px;
-        border-radius: 40px;
-        box-shadow: 1px 1px 3px;
+        width: 40px;
+        text-align: center;
+        color: var(--orange);
+        background-color: #ffffff;
+        border: none;
         font-size: 1.5rem;
-        max-width: 30%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        label {
-          font-size: 16px;
-        }
+        margin-left: 5px;
+      }
+      .eleDiv.search {
         .search-option {
           display: flex;
           align-items: center;
@@ -76,21 +113,46 @@
           right: 5px;
           top: 0px;
         }
-        button {
-          height: 40px;
-          width: 40px;
+      }
+      .eleDiv.language {
+        display: flex;
+        justify-content: space-around;
+        padding: 0px 10px 0px 5px;
+      }
+      .eleDiv.dateNtime {
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+
+        .time,
+        .date {
+          display: flex;
+          align-items: center;
           text-align: center;
-          color: var(--orange);
-          background-color: #ffffff;
-          border: none;
-          font-size: 1.5rem;
-          margin-left: 5px;
+        }
+      }
+      .eleDiv.user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        label {
+          margin-right: 10px;
+        }
+        div {
+          height: 100%;
+          position: relative;
+          left: 0px;
+          top: 0px;
+        }
+        div img {
+          width: 90%;
         }
       }
     }
     .main {
       flex: 1;
       background-color: aquamarine;
+      width: 30%;
     }
   }
 }
