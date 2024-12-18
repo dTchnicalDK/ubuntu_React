@@ -1,0 +1,92 @@
+.top-nav {
+  border: 1px solid black;
+  background-color: #ffffff;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    color: var(--orange);
+    background-color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 5px;
+  }
+  .eleDiv.search {
+    .search-option {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding-left: 10px;
+      margin: 0px 15px 0px 15px;
+      #search-select {
+        width: 20px;
+        margin-left: 3px;
+      }
+    }
+    .search-input {
+      height: 100%;
+      flex: 1;
+      position: relative;
+      display: flex;
+      text-align: center;
+      overflow: hidden;
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+      margin: 0px 15px 0px 15px;
+      input {
+        height: 100%;
+        width: 100%;
+        padding-left: 10px;
+        background-color: #ffffff;
+        border: none;
+        font-size: 1rem;
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 5px;
+      top: 0px;
+    }
+  }
+  .eleDiv.language {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 10px 0px 5px;
+  }
+  .eleDiv.dateNtime {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+
+    .time,
+    .date {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .eleDiv.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    label {
+      margin-right: 10px;
+    }
+    div {
+      height: 100%;
+      position: relative;
+      left: 0px;
+      top: 0px;
+    }
+    div img {
+      width: 90%;
+    }
+  }
+}

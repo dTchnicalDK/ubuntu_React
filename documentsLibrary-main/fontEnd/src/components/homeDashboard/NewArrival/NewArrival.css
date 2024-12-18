@@ -1,0 +1,25 @@
+.arrival-div {
+  position: relative;
+  width: 65%;
+  height: 150px;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 10px;
+  h3 {
+    position: absolute;
+    background-color: blueviolet;
+    width: 150px;
+    padding: 10px;
+    color: #ffffff;
+    transform: rotate(-90deg);
+    text-align: center;
+    left: -55px;
+    top: 54px;
+  }
+  .books {
+    height: 100%;
+    padding: 2%;
+    width: 100%;
+    border: 1px solid red;
+  }
+}

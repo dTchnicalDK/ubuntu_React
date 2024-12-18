@@ -1,0 +1,19 @@
+.daily-quote-div {
+  position: relative;
+  background-image: linear-gradient(#eb5231, #571fcf);
+  width: 30%;
+  padding: 10px 10px 30px 10px;
+  color: #ffffff;
+  border-radius: 10px;
+  h3 {
+    text-transform: capitalize;
+    font-size: larger;
+  }
+  p {
+    font-size: small;
+  }
+  small {
+    position: absolute;
+    right: 20px;
+  }
+}

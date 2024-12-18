@@ -1,82 +1,59 @@
 import React from "react";
 import "./HomeDashboard.css";
-import { HiOutlineSearch } from "react-icons/hi";
-import { CiBarcode } from "react-icons/ci";
-import { MdGTranslate } from "react-icons/md";
-import { IoMdClock } from "react-icons/io";
-import { SlCalender } from "react-icons/sl";
-import { FaCaretDown } from "react-icons/fa";
+import DashboardNav from "./DashboardNav/DashboardNav";
+import LeftSidebar from "./leftSidebar/LeftSidebar";
+import DailyQuoteCard from "./dailyQuote/DailyQuoteCard";
+import NewArrival from "./NewArrival/NewArrival";
+import BookCard from "./booksCard/BookCard";
 
 function HomeDashboard() {
   return (
     <>
       <div className="container">
-        <div className="side-bar"></div>
+        <div className="side-bar">
+          <LeftSidebar />
+        </div>
         <div className="main-container">
-          <div className="top-nav">
-            <div className="eleDiv search">
-              <div className="search-option">
-                <label htmlFor="All">All</label>
-                <select name="All" id="search-select">
-                  <option value="val1"></option>
-                  <option value="val2">search2</option>
-                  <option value="val3">search3</option>
-                  <option value="val4">search4</option>
-                  <option value="val5">search5</option>
-                </select>
+          <DashboardNav />
+
+          <div className="main-upper">
+            <DailyQuoteCard />
+            <NewArrival />
+          </div>
+          <div className="main-lower">
+            <h2>Good Morning</h2>
+            <div className="recommended divisions">
+              <div className="div-details">
+                <h4>Recommended for you</h4>
+                <h5>see all</h5>
               </div>
-              <div className="search-input">
-                <input type="text" placeholder="search..." id="search" />
-                <div className="buttons">
-                  <button>
-                    <HiOutlineSearch />
-                  </button>
-                  <div className="line"></div>
-                  <button>
-                    <CiBarcode />
-                  </button>
-                </div>
+              <div className="div-container">
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
               </div>
             </div>
-            <div className="eleDiv language">
-              <button>
-                <MdGTranslate />
-              </button>
-              <label htmlFor="">language</label>
-              <select name="language" id="language">
-                <option value="lan1">lan1</option>
-                <option value="vlan">lan2</option>
-                <option value="lan3">lan3</option>
-                <option value="lan4">lan4</option>
-                <option value="lan5">lan5</option>
-              </select>
-            </div>
-            <div className="button dateNtime eleDiv">
-              <div className="time">
-                <button>
-                  <IoMdClock />
-                </button>
-                <span>09:00:am</span>
-              </div>
-              <div className="date">
-                <button>
-                  <SlCalender />
-                </button>
-                <span>05/feb/1984</span>
-              </div>
-            </div>
-            <div className="button user eleDiv">
-              <div>
-                <img src="../src/assets/images/profileImg.png" alt="photo" />
+            <div className="recent-reading divisions">
+              <div className="div-details">
+                <h4>Recent Readings</h4>
+                <h5>see all</h5>
               </div>
 
-              <label>unknown</label>
-              <button>
-                <FaCaretDown />
-              </button>
+              <div className="div-container">
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+              </div>
             </div>
           </div>
-          <div className="main"></div>
         </div>
       </div>
     </>
