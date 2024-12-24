@@ -1,25 +1,32 @@
 .arrival-div {
   position: relative;
   width: 65%;
-  height: 150px;
+  height: 240px;
+  padding-left: 2%;
   background-color: #ffffff;
   overflow: hidden;
   border-radius: 10px;
-  h3 {
+  .new-arri-title {
     position: absolute;
-    background-color: blueviolet;
-    width: 150px;
-    padding: 10px;
-    color: #ffffff;
+    top: 42.4%;
+    left: -14%;
+    background-color: rgb(143, 0, 143);
+    width: 250px;
+    padding: 5px;
+    color: snow;
+    display: flex;
     transform: rotate(-90deg);
-    text-align: center;
-    left: -55px;
-    top: 54px;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
   }
   .books {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     height: 100%;
-    padding: 2%;
     width: 100%;
-    border: 1px solid red;
+    padding: 1%;
+    /* border: 1px solid red; */
   }
 }

@@ -7,10 +7,12 @@ function BookCard() {
       <div className="cover-page">
         <img src="./harryPotter.png" alt="book-cover" />
       </div>
-      <h3>The Gulliver's travel</h3>
       <div className="details">
-        <span> jonathan swift, </span>
-        <span>1983</span>
+        <h3>The Gulliver's travel</h3>
+        <div className="sub-details">
+          <span> jonathan swift, </span>
+          <span>1983</span>
+        </div>
       </div>
       <small>4/10</small>
     </div>
