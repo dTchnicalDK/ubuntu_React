@@ -61,11 +61,17 @@ a :hover {
   padding: 5px 20px;
   display: flex;
   flex-direction: column;
+
   overflow: hidden;
   .div-details {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    h5:hover {
+      cursor: pointer;
+      color: var(--orange);
+      letter-spacing: 1px;
+    }
   }
 
   .div-container {
@@ -74,6 +80,9 @@ a :hover {
     gap: 15px;
     width: 100%;
   }
+}
+.divisions.expanded {
+  height: 100%;
 }
 /* -------------------css startin here------------------------ */
 .container {
@@ -104,23 +113,25 @@ a :hover {
     }
     .main-lower {
       width: 100%;
+
       background-color: #ffffff;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-
-      /* .divisions {
-        padding: 20px;
+      border: 1px solid black;
+      .recommended,
+      .recent-reading {
+        width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        /* border: 1px solid green; */
 
-       
-        gap: 2%;
-        width: 90%;
-        height: 300px;
-        overflow: hidden;
-        flex-wrap: wrap;
-      } */
+        .div-container {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
     }
   }
 }
