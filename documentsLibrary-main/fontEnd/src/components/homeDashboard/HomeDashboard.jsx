@@ -17,11 +17,16 @@ function HomeDashboard() {
       divisionRef.current.classList.toggle("expanded");
     }
   };
+
   const expandRecentReadings = () => {
     console.log("recent reading clicked");
     if (recetReadingRef.current) {
       recetReadingRef.current.classList.toggle("expanded");
     }
+  };
+
+  const expandNewArrival = () => {
+    console.log("newArrivalExpand clicked");
   };
 
   return (
@@ -35,7 +40,7 @@ function HomeDashboard() {
 
           <div className="main-upper">
             <DailyQuoteCard />
-            <NewArrival />
+            <NewArrival expandNewArrival={expandNewArrival} />
           </div>
           <div className="main-lower">
             <h2>Good Morning</h2>

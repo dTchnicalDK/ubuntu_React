@@ -6,6 +6,7 @@
   background-color: #ffffff;
   overflow: hidden;
   border-radius: 10px;
+  border: 1px solid green;
   .new-arri-title {
     position: absolute;
     top: 42.4%;
@@ -19,6 +20,21 @@
     justify-content: center;
     font-size: 1.5rem;
     font-weight: 800;
+  }
+  #see-all {
+    width: 100%;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    h5 {
+      position: absolute;
+      right: 20px;
+      cursor: pointer;
+    }
+    h5:hover {
+      letter-spacing: 1px;
+      color: var(--orange);
+    }
   }
   .books {
     display: flex;
