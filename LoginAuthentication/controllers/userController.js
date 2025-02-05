@@ -1,8 +1,7 @@
-import { json } from "express";
+import res from "express/lib/response.js";
 import { User } from "../models/userModels.js";
-import bcrypt from "bcryptjs";
 
-// controller for creating a new user
+///////////////////////// controller for creating a new user/////////////////////////////
 export async function createUser(req, res) {
   const { userName, password, email, isAdmin } = req.body;
   try {
@@ -31,5 +30,19 @@ export async function createUser(req, res) {
       msg: "user creation error",
       Errors: error,
     });
+  }
+}
+
+////////////////////fuction to get all users/////////////////////////
+export async function getAllUsers(req, res) {
+  try {
+    console.log("all user ran");
+
+    const users = await User.find();
+    console.log("status ok");
+
+    res.status(200).json({ msg: "successfull!", data: users });
+  } catch (error) {
+    res.status(500).json({ msg: "user fetching error", error });
   }
 }

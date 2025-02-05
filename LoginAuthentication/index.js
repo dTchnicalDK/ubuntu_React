@@ -18,5 +18,5 @@ app.use("/api", router);
 // server
 dbConnection(dbConnectionUri);
 app.listen(port, () => {
-  console.log(`server started http://localhost:${port}/api/home`);
+  console.log(`server started http://localhost:${port}/api/`);
 });
