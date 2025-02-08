@@ -3,6 +3,7 @@ import express from "express";
 import dbConnection from "./connections/dbConnection.js";
 import router from "./routes/docsRoute.js";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
@@ -11,6 +12,7 @@ const dbConnectionUri = process.env.MONGO_ATLAS_URI;
 
 // middlewares
 app.use(express.json());
+app.use(cookieParser());
 
 //routes
 app.use("/api", router);
