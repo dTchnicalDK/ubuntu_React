@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from "express";
 import dbConnection from "./connections/dbConnection.js";
 import router from "./routes/docsRoute.js";
-import bodyParser from "body-parser";
+import cors from "cors";
 import cookieParser from "cookie-parser";
 
 const app = express();
@@ -11,6 +11,7 @@ const port = process.env.PORT;
 const dbConnectionUri = process.env.MONGO_ATLAS_URI;
 
 // middlewares
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 

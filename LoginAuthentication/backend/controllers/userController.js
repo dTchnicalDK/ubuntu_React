@@ -35,7 +35,9 @@ export async function createUser(req, res) {
         email,
         isAdmin,
       });
-      res.status(201).json({ msg: createdUser });
+      res
+        .status(201)
+        .json({ msg: "Registration successful", data: createdUser });
     }
   } catch (error) {
     res.status(400).json({

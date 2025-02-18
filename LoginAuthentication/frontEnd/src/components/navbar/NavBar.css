@@ -1,0 +1,37 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-item {
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.nav-item:hover {
+  text-decoration: underline;
+}
+a.active {
+  color: greenyellow;
+  text-decoration: underline;
+}
